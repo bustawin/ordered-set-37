@@ -1,0 +1,11 @@
+venv
+.mypy_cache
+__pycache__
+*.egg-info
+.idea
+.pytest_cache
+*.pyi
+build
+dist
+assets/*.iconset
+.eggs
