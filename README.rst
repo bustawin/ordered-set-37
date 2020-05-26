@@ -3,6 +3,8 @@ Ordered Set
 A dead simple set that preserves insertion order, internally using the
 python's 3.7 dict, which preserves order.
 
+``pip install ordered-set-37``
+
 This class subclasses and implements all the methods of ``MutableSet``.
 
 .. code-block:: python
