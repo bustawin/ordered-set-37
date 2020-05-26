@@ -42,3 +42,17 @@ def test_str():
 def test_repr():
     x = OrderedSet([1, 2, 3])
     assert repr(x) == "<OrderedSet {1, 2, 3}>"
+
+
+def test_eq():
+    x = OrderedSet([1, 2, 3])
+    y = OrderedSet([1, 2, 3])
+    assert x == y
+    assert x is not y
+
+
+def test_init_empty():
+    x = OrderedSet()
+    assert len(x) == 0
+    x.add(2)
+    assert len(x) == 1
