@@ -1,6 +1,11 @@
+from pathlib import Path
+
+import mypy.api
 import pytest
 
 from ordered_set_37 import OrderedSet
+
+TESTS = Path(__file__).parent
 
 
 def test_add():
@@ -56,3 +61,11 @@ def test_init_empty():
     assert len(x) == 0
     x.add(2)
     assert len(x) == 1
+
+
+def test_typing_mypy():
+    """Checks the typing values with mypy."""
+    fixture = TESTS / "_test_mypy.py"
+    module = TESTS.parent / "ordered_set_37"
+    *_, error = mypy.api.run([str(module), str(fixture)])
+    assert not error

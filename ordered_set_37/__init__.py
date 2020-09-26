@@ -10,7 +10,7 @@ class OrderedSet(t.MutableSet[T]):
     >>> OrderedSet([1, 2, "foo"])
     """
 
-    def __init__(self, iterable: t.Optional[t.Iterator[T]] = None):
+    def __init__(self, iterable: t.Optional[t.Iterable[T]] = None):
         self._d = dict.fromkeys(iterable) if iterable else {}
 
     def add(self, x: T) -> None:

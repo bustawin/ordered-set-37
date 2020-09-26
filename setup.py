@@ -2,11 +2,11 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
-test_requires = ["pytest"]
+test_requires = ["pytest", "mypy"]
 
 setup(
     name="Ordered-set-37",
-    version="1.0b2",
+    version="1.0",
     url="https://github.com/bustawin/ordered-set-37",
     project_urls={
         "Documentation": "https://github.com/bustawin/ordered-set-37",
