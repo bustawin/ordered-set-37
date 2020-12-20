@@ -6,7 +6,7 @@ test_requires = ["pytest", "mypy"]
 
 setup(
     name="Ordered-set-37",
-    version="1.0",
+    version="1.1",
     url="https://github.com/bustawin/ordered-set-37",
     project_urls={
         "Documentation": "https://github.com/bustawin/ordered-set-37",

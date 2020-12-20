@@ -17,7 +17,7 @@ class OrderedSet(t.MutableSet[T]):
         self._d[x] = None
 
     def discard(self, x: T) -> None:
-        self._d.pop(x)
+        self._d.pop(x, None)
 
     def __getitem__(self, index) -> T:
         try:

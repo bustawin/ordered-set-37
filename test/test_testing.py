@@ -20,6 +20,23 @@ def test_discard():
     assert list(x) == [1, -1]
 
 
+def test_discard_ignores_missing_element():
+    x = OrderedSet()
+    x.discard(1)  # This does not raise
+
+
+def test_remove():
+    x = OrderedSet([1])
+    x.remove(1)
+    assert not x
+
+
+def test_remove_raises_missing_element():
+    x = OrderedSet()
+    with pytest.raises(KeyError):
+        x.remove(1)
+
+
 def test_getitem():
     x = OrderedSet([1, 2, -1])
     assert x[0] == 1
