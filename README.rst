@@ -9,6 +9,7 @@ This class subclasses and implements all the methods of ``MutableSet``.
 
 .. code-block:: python
 
+   from ordered_set_37 import OrderedSet
    x = OrderedSet([1, 2, -1, "bar"])
    x.add(0)
    assert list(x) == [1, 2, -1, "bar", 0]
