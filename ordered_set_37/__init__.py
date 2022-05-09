@@ -18,6 +18,9 @@ class OrderedSet(t.MutableSet[T]):
     def add(self, x: T) -> None:
         self._d[x] = None
 
+    def clear(self) -> None:
+        self._d.clear()
+
     def discard(self, x: T) -> None:
         self._d.pop(x, None)
 
