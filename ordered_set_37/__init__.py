@@ -9,12 +9,17 @@ class OrderedSet(t.MutableSet[T]):
 
     >>> OrderedSet([1, 2, "foo"])
     """
+    
+    __slots__ = ('_d',)
 
     def __init__(self, iterable: t.Optional[t.Iterable[T]] = None):
         self._d = dict.fromkeys(iterable) if iterable else {}
 
     def add(self, x: T) -> None:
         self._d[x] = None
+
+    def clear(self) -> None:
+        self._d.clear()
 
     def discard(self, x: T) -> None:
         self._d.pop(x, None)
